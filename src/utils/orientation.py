@@ -120,3 +120,16 @@ def visualize_angles(im, mask, angles, W):
     cv.resize(result, im.shape, result)
     return result
 
+
+# HOG Calculation
+def calculate_hog(image):
+    winSize = (64,64)
+    blockSize = (16,16)
+    blockStride = (8,8)
+    cellSize = (8,8)
+    nbins = 9
+
+    hog = cv.HOGDescriptor(winSize, blockSize, blockStride, cellSize, nbins)
+    hist = hog.compute(image)
+    return hist.flatten()
+

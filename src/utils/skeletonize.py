@@ -8,7 +8,7 @@ thinning digital patterns, T. Y. Zhang and C. Y. Suen, Communications of the ACM
 """
 import numpy as np
 import cv2 as cv
-from crossing_number import calculate_minutiaes
+
 from skimage.morphology import skeletonize as skelt
 from skimage.morphology import thin
 def skeletonize(image_input):
